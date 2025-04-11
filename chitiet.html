@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chi tiết sản phẩm</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        /* Định dạng body để căn giữa */
+        .body-cart {
+            display: flex;
+            justify-content: center;  /* Căn giữa theo chiều ngang */
+            align-items: center;      /* Căn giữa theo chiều dọc */
+            margin: 0;
+            margin-top: 20px;
+        }
+        /* Hộp chứa giỏ hàng */
+        .cart-container {
+            width: 600px;               /* Độ rộng 60% màn hình */
+            max-width: 600px;         /* Tối đa 600px */
+            background: white;
+            padding: 20px;
+            border-radius: 10px;      /* Bo góc mềm mại */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        /* Nút thanh toán */
+        .checkout-btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        /* Nút thêm số lượng */
+        .quantity{
+            width: 29px;
+            height: 28px;
+            border-color: #e7eaee;
+            border: 1px solid;
+            color: #344054;
+            border-radius: 6px 0px 0px 6px;
+            background-color: #fffa;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background-color: #f2f4f7;">
+    <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #ffd400;">
+        <div class="container">
+                <a class="navbar-brand" href="trangchu.html" style="margin: 0;"><img src="images/logo.png" alt="" width="90%"></a>
+                <div class="search-container">
+                    <input type="text" placeholder="Bạn tìm gì..." width="">
+                    <i class="fa fa-search"></i>
+                </div>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" onclick="window.location.href='login.html'"><i class="bi bi-person"></i>Đăng nhập</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><i class="bi bi-cart"></i>Giỏ hàng</a>
+                        </li>
+                        <li class="location nav-item active">
+                            <a class="nav-link" href="#"><i class="bi bi-geo-alt"></i><span style="padding-top: 5px;">Hồ Chí Minh</span> <span style="float: right;padding-top: 5px;">></span></a>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+        </div>
+    </nav>
+    <div style="background-color: #ffd400;">
+        <div class="container">
+            <div class="menu row">
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-phone"></i>Điện thoại</a>
+                    </div>
+                </div>
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-laptop"></i>Laptop</a>
+                    </div>
+                </div>
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-smartwatch"></i>Smartwatch</a>
+                    </div>
+                </div>
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-watch"></i>Đồng hồ</a>
+                    </div>
+                </div>
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-tablet"></i>Tablet</a>
+                    </div>
+                </div>
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-headphones"></i>Phụ kiện</a>
+                    </div>
+                </div>
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-pc-display-horizontal"></i>PC, Máy in</a>
+                    </div>
+                </div>
+                <div class="small col-sm-3">
+                    <div class="mobi">
+                        <a href=""><i class="bi bi-calendar4"></i>Dịch vụ tiện ích</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="body-cart">
+        <div class="cart-container">
+            <div style="border-style: dotted;padding: 5px;padding-left: 10px;border-color: #2a83e9;color: #2a83e9;background-color: #f1f8fe;">
+                Vui lòng cung cấp thông tin nhận hàng <br>
+                <i class="bi bi-geo-alt" style="color: red;"></i> <span style="color: black;">Hồ Chí Minh</span>
+            </div>
+            <div style="margin-top: 30px;">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="images/iphone.jpg" width="80px" height="80px" alt="">
+                    </div>
+                    <div class="col-lg-8" >
+                        <p>Điện thoại Iphone 16 pro 256GB</p>
+                        <button type="button" class="btn btn-primary" style="background-color: #f6f7f8;color: black;border-color: #f6f7f8;">Màu bạc <i class="fa fa-caret-down"></i></button> <br>
+                        <div style="background-color: #ebf3fb;color: #2a83e9;border-color: #ebf3fb;width: 270px;margin-top: 10px;">
+                            <i class="bi bi-lightning-charge"></i> Flashsale kết thúc sau: 00:57:45</i>
+                        </div>
+                        <button type="button" class="btn btn-primary" style="background-color: white;color: #2377e8;border-color: white;">2 Khuyến mãi <i class="fa fa-caret-down"></i></button> <br>
+                    </div>
+                    <div class="col-lg-2">
+                        <span class="text-danger">7.490.000đ</span>
+                        <small style="text-decoration: line-through">8.490.000đ</small>
+                    </div>
+                </div>
+            </div>
+            <div class="" style="float: right;"> 
+                <small  style="padding-right: 20px;color: #6e6e6e;">Xóa</small>  <button type="button" class="quantity">-</button><button type="button" class="quantity" style="border-radius: 0px ;">1</button><button type="button" class="quantity" style="border-radius: 0px 6px 6px 0px;">+</button>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-lg-6">
+                    <p>Tạm tính (1 sản phẩm):</p>
+                </div>
+                <div class="col-lg-6" >
+                    <p style="float: right;">7.490.000đ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-cart">
+        <div class="cart-container">
+            <h5>Yêu cầu đặc biệt</h5>
+            <div class="form-check">
+              <label class="form-check-label" style="margin-bottom: 5px">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" style="width: 17px;height: 16px;">
+                <p style="margin-left: 10px;">Chuyển danh bạ, dữ liệu qua máy mới</p>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" style="margin-bottom: 5px">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" style="width: 17px;height: 16px;">
+                <p style="margin-left: 10px;">Xuất hóa đơn công ty</p>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" style="margin-bottom: 5px">
+                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" style="width: 17px;height: 16px;">
+                <p style="margin-left: 10px;">Yêu cầu khác</p>
+              </label>
+            </div>
+        </div>
+    </div>
+    <div class="body-cart">
+        <div class="cart-container">
+            <i class="bi bi-receipt" style="color: blue;"></i> Sử dụng mã giảm giá
+            <i class="fa fa-caret-right" style="float: right;"></i> 
+            <hr>
+            <img src="images/icon.ico" width="20px" height="20px" alt="">
+            Dùng điểm Quà Tặng VIP
+            <hr>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5>Tổng tiền</h5>
+                </div>
+                <div class="col-lg-6" >
+                    <h5 style="float: right;">7.490.000đ</h5>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-lg-6">
+                    <span>Điểm tích lũy Quà Tặng VIP</span>
+                </div>
+                <div class="col-lg-6" >
+                    <span style="float: right;">14.980 điểm</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-cart">
+        <div class="cart-container">
+           <h5>Hình thức thanh toán</h5>
+           <div class="form-check">
+            <label class="form-check-label">
+               <input type="radio" class="form-check-input" name="" id="" value="checkedValue" style="width: 16px;height: 16px;">
+               <p style="margin-left: 10px;">Thanh toán tiền mặt khi nhận hàng</p>
+             </label>
+           </div>
+           <div class="form-check">
+            <label class="form-check-label">
+               <input type="radio" class="form-check-input" name="" id="" value="checkedValue" style="width: 16px;height: 16px;">
+               <p style="margin-left: 10px;">Chuyển khoản ngân hàng</p>
+             </label>
+           </div>
+           <button type="button" class="btn btn-primary" style="background-color: white;color: #2377e8;border-color: white;">6 hình thức thanh toán khác <i class="fa fa-caret-down"></i></button> <br>
+           <div class="form-check">
+             <label class="form-check-label">
+               <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked style="width: 16px;height: 17px;">
+               <p style="margin-left: 10px;">Tôi đồng ý với <a style="color: #3b82f6;">Chính sách xử lý dữ liệu các nhân</a> của Thế Giới Di Động</p>
+             </label>
+           </div>
+           <button type="button" class="btn btn-primary" style="width: 560px;height: 40px;border-radius: 8px;background-color: #fc7600;border-color: #fc7600;">Đặt hàng</button>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

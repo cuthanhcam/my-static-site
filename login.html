@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        /* Thiết kế form */
+        .card{
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body >
+    <div class="container">
+      <form action="" id="login" >
+        <div class="card" style="width: 50%;margin: auto;">
+            <div class="card-header">
+                <h3>Đăng nhập</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="">Tài khoản:</label>
+                    <input type="text" class="form-control" name="taikhoan" id="taikhoan" aria-describedby="helpId" placeholder="">
+                    <small type="text" style="color: red;" id="error_tk"></small>
+                </div>
+                <div class="form-group">
+                    <label for="">Mật khẩu:</label>
+                    <input type="password"
+                    class="form-control" name="matkhau" id="matkhau" aria-describedby="helpId" placeholder="">
+                    <small type="text" style="display: none;color: red;" id="error_mk"></small>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </div>
+        </div>  
+      </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+        const tk = 'nguyenhoangtrung';
+        const mk = '123456';
+         
+        document.getElementById("login").addEventListener("submit", function(event){
+            const taikhoan = document.getElementById("taikhoan").value;
+            const matkhau = document.getElementById("matkhau").value;
+            const error_tk = document.getElementById("error_tk").value; 
+            const error_mk = document.getElementById("error_tk").value;
+            
+            if (taikhoan === '' || matkhau === '') {
+                alert("Vui lòng điền đẩy đủ thông tin đăng nhập!");
+            }else if(taikhoan !== tk || matkhau !== mk) {
+                alert("Sai tài khoản hoặc mật khẩu!");
+            }else{
+                window.location.href = "trangchu.html"; // Chuyển hướng đến trang mới
+            }
+            event.preventDefault(); // Ngăn chặn hành vi submit mặc định
+            
+        });
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
